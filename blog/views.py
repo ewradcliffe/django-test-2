@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
+from .models import Reservation
 
 posts = [
     {'author': 'Ed Radcliffe',
@@ -30,8 +32,8 @@ def about(request):
 def contact(request):
     return render(request, 'blog/contact.html', {'title': 'Contact'})
 
-
 def booking(request):
     return render(request, 'blog/booking.html', {'title': 'Booking'})
 
-
+class ReservationList(generic.ListView):
+    model = Reservation

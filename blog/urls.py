@@ -7,3 +7,5 @@ urlpatterns = [
     path('contact/', views.contact, name = 'blog-contact'),
     path('booking/', views.booking, name = 'blog-booking'),
 ]
+
+
