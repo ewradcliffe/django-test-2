@@ -31,3 +31,7 @@ def contact(request):
     return render(request, 'blog/contact.html', {'title': 'Contact'})
 
 
+def booking(request):
+    return render(request, 'blog/booking.html', {'title': 'Booking'})
+
+
